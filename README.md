@@ -1,20 +1,22 @@
 # General-disorder-prediction
-This repository contains models used to predict general disorder of compounds (ordered/disordered, binary classification)
+At the most basic level all compounds can be divided into two categories: ordered and disordered, judging by the presence of the partial occupancies in CIF. Here we try to find the best machine learning model which would predict disorder from the composition.
 
-At the most basic level all compounds can be divided into two categories: ordered and disordered, judging by the presence of the partial occupancies in CIF. We start from trying to find the best machine learning model which would predict disorder from the composition. 
 
-Table~\ref{models-global-disorder} describes some of the best models we were able to build together with their performance. 
 
-\begin{table}[H]
-\centering
-\begin{tabular}{||l|l|l|c|c|c|c|c||}
-\hline 
-\# & Model & Features & Balanced Accuracy & Recall & Precision & ROC AUC & MCC  \\ \hline
-1& RF & Magpie & 0.87 & 0.90 & 0.90 & 0.94 & 0.74 \\ \hline
-2& 3-NN & Magpie (scaled) & 0.79 & 0.83 & 0.83 & 0.86 & 0.58 \\ \hline
-3& Roost & Matscholar & 0.84 & 0.83 & 0.89 & 0.91 & 0.67 \\ \hline
-4& CrabNet & Mat2vec & 0.90 & 0.88 & 0.94 & 0.95 & 0.79 \\ \hline
-\end{tabular}
-\caption{Models for general disorder prediction. Models were trained using the same training-validation-test split. Abbreviations used are: RF = Random Forrest, 3-NN = Nearest Neighbor Classifier with 3 neighbors, ROC AUC = area under the receiver operator curve, MCC = Matthews correlation coefficient.}
-\label{models-global-disorder}
-\end{table}
+
+This repository contains models used to predict general disorder of compounds (ordered/disordered, binary classification). Trained model can be found on my group external hard drive. 
+
+**Random Forrest + Magpie**
+ Balanced Accuracy = 0.87, Recall = 0.9, Precision = 0.9, ROC AUC = 0.94, MCC (Matthews correlation coefficient) = 0.74
+**3-NN + scaled Magpie**
+Balanced Accuracy = 0.79, Recall = 0.83, Precision = 0.83, ROC AUC = 0.86, MCC (Matthews correlation coefficient) = 0.58
+**Roost + Matscholar**
+Balanced Accuracy = 0.84, Recall = 0.83, Precision = 0.89, ROC AUC = 0.91, MCC (Matthews correlation coefficient) = 0.67
+**CrabNet + Mat2vec**
+Balanced Accuracy = 0.90, Recall = 0.88, Precision = 0.94, ROC AUC = 0.95, MCC (Matthews correlation coefficient) = 0.79
+**Ensemble-10Roost + Matscholar**
+Balanced Accuracy = 0.86, Recall = 0.84, Precision = 0.92, ROC AUC = 0.93, MCC (Matthews correlation coefficient) = 0.71
+**Ensemble-10CrabNet + Matscholar**
+Balanced Accuracy = 0.91, Recall = 0.89, Precision = 0.95, ROC AUC = 0.97, MCC (Matthews correlation coefficient) = 0.82
+**Blending (Logistic regression on output of all classifiers)**
+Balanced Accuracy = 0.90, Recall = 0.91, Precision = 0.93, ROC AUC = 0.96, MCC (Matthews correlation coefficient) = 0.80
