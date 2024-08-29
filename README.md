@@ -1,10 +1,15 @@
 # General-disorder-prediction
 At the most basic level all compounds can be divided into two categories: ordered and disordered, judging by the presence of the partial occupancies in CIF. Here we try to find the best machine learning model which would predict disorder from the composition.
 
+Python environment file is attached (sorry, I probably should have created specific environment for this project, but I did not)
 
+The code is implemented in pytorch lightning, logging is to wandb (so do not forget to specify you key)
 
+Trained models can be found on my group's external hard drive (beware formated for MAC, does not work in Windows)
 
 This repository contains models used to predict general disorder of compounds (ordered/disordered, binary classification). Trained model can be found on my group external hard drive. 
+
+**List of models:**
 
 **Random Forrest + Magpie**
  Balanced Accuracy = 0.87, Recall = 0.9, Precision = 0.9, ROC AUC = 0.94, MCC (Matthews correlation coefficient) = 0.74
@@ -26,3 +31,6 @@ Balanced Accuracy = 0.91, Recall = 0.89, Precision = 0.95, ROC AUC = 0.97, MCC (
 
 **Blending (Logistic regression on output of all classifiers)**
 Balanced Accuracy = 0.90, Recall = 0.91, Precision = 0.93, ROC AUC = 0.96, MCC (Matthews correlation coefficient) = 0.80
+
+**Transfer model: CrabNet trained on formation energy transfered to predict disorder**
+Just as simple CrabNet
