@@ -3,7 +3,7 @@ At the most basic level all compounds can be divided into two categories: ordere
 
 Python environment file is attached (sorry, I probably should have created specific environment for this project, but I did not)
 
-The code is implemented in pytorch lightning, logging is to wandb (so do not forget to specify you key)
+The code is implemented in pytorch lightning, logging is to wandb (so do not forget to specify your key)
 
 Trained models can be found on my group's external hard drive (beware formated for MAC, does not work in Windows)
 
