@@ -32,4 +32,5 @@ Balanced Accuracy = 0.91, Recall = 0.89, Precision = 0.95, ROC AUC = 0.97, MCC (
 Balanced Accuracy = 0.90, Recall = 0.91, Precision = 0.93, ROC AUC = 0.96, MCC (Matthews correlation coefficient) = 0.80
 
 **Transfer model: CrabNet trained on formation energy transfered to predict disorder**
-Just as simple CrabNet
+
+No gains compared to simple CrabNet
