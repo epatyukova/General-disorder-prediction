@@ -7,7 +7,6 @@ The code is implemented in pytorch lightning, logging is to wandb (so do not for
 
 Trained models can be found on my group's external hard drive (beware formated for MAC, does not work in Windows)
 
-This repository contains models used to predict general disorder of compounds (ordered/disordered, binary classification). Trained model can be found on my group external hard drive. 
 
 **List of models:**
 
