@@ -8,15 +8,21 @@ This repository contains models used to predict general disorder of compounds (o
 
 **Random Forrest + Magpie**
  Balanced Accuracy = 0.87, Recall = 0.9, Precision = 0.9, ROC AUC = 0.94, MCC (Matthews correlation coefficient) = 0.74
+ 
 **3-NN + scaled Magpie**
 Balanced Accuracy = 0.79, Recall = 0.83, Precision = 0.83, ROC AUC = 0.86, MCC (Matthews correlation coefficient) = 0.58
+
 **Roost + Matscholar**
 Balanced Accuracy = 0.84, Recall = 0.83, Precision = 0.89, ROC AUC = 0.91, MCC (Matthews correlation coefficient) = 0.67
+
 **CrabNet + Mat2vec**
 Balanced Accuracy = 0.90, Recall = 0.88, Precision = 0.94, ROC AUC = 0.95, MCC (Matthews correlation coefficient) = 0.79
+
 **Ensemble-10Roost + Matscholar**
 Balanced Accuracy = 0.86, Recall = 0.84, Precision = 0.92, ROC AUC = 0.93, MCC (Matthews correlation coefficient) = 0.71
+
 **Ensemble-10CrabNet + Matscholar**
 Balanced Accuracy = 0.91, Recall = 0.89, Precision = 0.95, ROC AUC = 0.97, MCC (Matthews correlation coefficient) = 0.82
+
 **Blending (Logistic regression on output of all classifiers)**
 Balanced Accuracy = 0.90, Recall = 0.91, Precision = 0.93, ROC AUC = 0.96, MCC (Matthews correlation coefficient) = 0.80
