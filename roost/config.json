@@ -1,0 +1,51 @@
+{
+    "seed": 42,
+    "model_name": "roost",
+    "epochs": 50,
+    "patience": 10,
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "train": true,
+    "evaluate": true,
+    "classification": true,
+    "data_params": {
+        "batch_size": 1024,
+        "pin_memory": false,
+        "shuffle": true,
+        "data_seed": 0,
+        "train_path": "data/roost_data/train.csv",
+        "val_path": "data/roost_data/val.csv",
+        "test_path": "data/roost_data/test.csv"
+    },
+    "setup_params": {
+        "optim": "AdamW",
+        "learning_rate": 0.0005,
+        "weight_decay": 1e-06,
+        "momentum": 0.9,
+        "loss": "BCEWithLogits",
+        "base_lr": 0.0001,
+        "max_lr": 0.006,
+        "swa_epoch_start": 0.05,
+        "swa_lrs": 0.01
+    },
+    "model_params": {
+        "input_dim": "elem_emb_len",
+        "output_dim": 1,
+        "hidden_layer_dims": [
+            1024,
+            512,
+            256,
+            64
+        ],
+        "n_graphs": 2,
+        "elem_heads": 3,
+        "internal_elem_dim": 64,
+        "g_elem_dim": 256,
+        "f_elem_dim": 256,
+        "comp_heads": 3,
+        "g_comp_dim": 256,
+        "f_comp_dim": 256,
+        "batchnorm": false,
+        "negative_slope": 0.2
+    }
+}
