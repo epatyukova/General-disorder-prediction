@@ -34,3 +34,7 @@ Balanced Accuracy = 0.90, Recall = 0.91, Precision = 0.93, ROC AUC = 0.96, MCC (
 **Transfer model: CrabNet trained on formation energy transfered to predict disorder**
 
 No gains compared to simple CrabNet
+
+**Multi-property model: CrabNet encoder with two projection heads predicting disorder and formation energy.**
+
+Trained on disorder data + MP (entry can have only one of those two values to be included in teh dataset). No gains compared to simple CrabNet
