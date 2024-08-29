@@ -1,0 +1,49 @@
+{
+    "seed": 30,
+    "model_name": "roost",
+    "epochs": 100,
+    "patience": 30,
+    "test_size": 0.2,
+    "val_size": 0.1,
+    "classification": true,
+    "data_params": {
+        "embed": "matscholar",
+        "batch_size": 512,
+        "train_path": "data/roost_data/train.csv",
+        "val_path": "data/roost_data/val.csv",
+        "test_path": "data/roost_data/test.csv"
+    },
+    "setup_params": {
+        "optim": "AdamW",
+        "learning_rate": 0.0002,
+        "weight_decay": 1e-6,
+        "momentum": 0.9,
+        "loss": "BCEWithLogitsLoss",
+        "base_lr": 0.001,
+        "max_lr": 0.006,
+        "swa_epoch_start": 0.2,
+        "swa_lrs": 2e-4,
+        "gamma": 0.2
+    },
+    "model_params": {
+        "input_dim": "elem_emb_len",
+        "output_dim": 1,
+        "hidden_layer_dims": [
+            1024,
+            512,
+            256,
+            128,
+            64
+        ],
+        "n_graphs": 3,
+        "elem_heads": 3,
+        "internal_elem_dim": 64,
+        "g_elem_dim": 256,
+        "f_elem_dim": 256,
+        "comp_heads": 3,
+        "g_comp_dim": 256,
+        "f_comp_dim": 256,
+        "batchnorm": false,
+        "negative_slope": 0.2
+    }
+}
