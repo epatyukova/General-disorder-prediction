@@ -356,7 +356,7 @@ def main(**config):
 
 if __name__=='__main__':
     wandb.init(project="Roost-global-disorder-ensemble")
-    wandb.login(key='b11d318e434d456c201ef1d3c86a3c1ce31b98d7')
+    wandb.login(key='')
 
     with open('roost/roost_config.json','r') as f:
         config=json.load(f)
