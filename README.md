@@ -1,7 +1,7 @@
 # General-disorder-prediction
 At the most basic level all compounds can be divided into two categories: ordered and disordered, judging by the presence of the partial occupancies in CIF. Here we try to find the best machine learning model which would predict disorder from the composition.
 
-The model is trained on the ICSD data measured at room temperture and atmosperic preassure. It is interesting note that the fraction of compounds in the ICSD which have both ordered and disordered version for the same composition is just 1%. So, predicting disorder from composion is a well defined task.
+The model is trained on the ICSD data measured at room temperature and atmosperic preassure. It is interesting to note that the fraction of compounds in the ICSD which have both ordered and disordered version for the same composition is just 1%. So, predicting disorder from composion is a well defined task.
 
 Python environment file is attached (sorry, I probably should have created specific environment for this project, but I did not)
 
